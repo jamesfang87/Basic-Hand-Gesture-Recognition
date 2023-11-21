@@ -1,4 +1,4 @@
-# Basic-Hand-Gesture-Recognition
+# Basic Hand Gesture Recognition
 
 A program that takes in a video of a person drawing the 10 Arabic numerals with their hands and classifies the video by which Arabic numeral the person is drawing.
 
