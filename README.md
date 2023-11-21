@@ -11,3 +11,6 @@ We can take advantage of certain "norms" in the data.  Most notably, the vertica
 We also do not need to care about the distance between hand landmarks as:
 1. it does not tell us any information (for this dataset at least)
 2. hand shape generally stays in the same position: where the hand is in a pointing position
+
+Expansion to Sign Language and Limitations
+Sign language encompasses a larger vocabulary with both static and dynamic gestures as well as varying hand shapes.  When expanding to sign language, we will have to take into account the distance between the hands, the z-axis, and rising computational costs.  By running DTW on all gestures the in the vocabulary, the time complexity of the classifcation algorithm becomes O(NMP) where N and M are the lengths of the two signals and P is the number of gestures in the vocabulary where runtime will generally rise cubically.  bu  
