@@ -3,8 +3,8 @@ from scipy.spatial.distance import euclidean
 from fastdtw import fastdtw
 import numpy as np
 
-testing_data = []
-examples = []
+testing_data = []  # fill in testing data
+examples = []  # fill in examples
 
 for i in range(len(testing_data)):
     process(testing_data[i])
