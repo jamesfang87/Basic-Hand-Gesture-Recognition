@@ -11,12 +11,10 @@ def normalize(gesture1, gesture2):
     g1 = copy.deepcopy(gesture1)
     g2 = copy.deepcopy(gesture2)
 
-    # find x_max, x_min
-    x_min = np.min(np.concatenate((g1[:, 0], g2[:, 0])))
-    x_max = np.max(np.concatenate((g1[:, 0], g2[:, 0])))
-
-    normalize_helper(g1, [x_min, x_max], [np.min(g1[:, 1]), np.max(g1[:, 1])])
-    normalize_helper(g2, [x_min, x_max], [np.min(g2[:, 1]), np.max(g2[:, 1])])
+    normalize_helper(g1, [np.min(g1[:, 0]), np.max(g1[:, 0])],
+                         [np.min(g1[:, 1]), np.max(g1[:, 1])])
+    normalize_helper(g2, [np.min(g2[:, 0]), np.max(g2[:, 0])],
+                         [np.min(g2[:, 1]), np.max(g2[:, 1])])
 
     return g1, g2
 
