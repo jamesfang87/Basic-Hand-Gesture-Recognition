@@ -48,5 +48,7 @@ def detect(output_path, option, video_path=None):
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-
+    
+    cap.release()
+    cv2.destroyAllWindows()
     return np.array(data)
