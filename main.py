@@ -1,10 +1,7 @@
 from util import *
-from classification import classify, examples
+from classification import classify
 
-video_path = ""
-data = detect("out", 0)
+video_path = "2.mov"
+data = detect(1, video_path)
 
-
-print(data)
-
-classify([data], examples)
+classify([data])  # put in an array of data
