@@ -5,7 +5,8 @@ import numpy as np
 
 examples = []  # fill in examples
 
-def classify(testing_data, examples):
+
+def classify(testing_data):
     for i in range(len(testing_data)):
         process(testing_data[i])
     for i in range(len(examples)):
@@ -20,5 +21,5 @@ def classify(testing_data, examples):
             if distance < min_dist:
                 prediction = i
                 min_dist = distance
-
+            print(distance)
         print(prediction)
